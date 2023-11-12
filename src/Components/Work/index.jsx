@@ -3,7 +3,7 @@ import Gambar3 from "./Gambar3";
 import Gambar4 from "./Gambar4";
 import Gambar5 from "./Gambar5";
 import Gambar6 from "./Gambar6";
-import Gambar1 from "./gambar1";
+import Gambar1 from "./Gambar1";
 
 const Work = () => {
   return (
