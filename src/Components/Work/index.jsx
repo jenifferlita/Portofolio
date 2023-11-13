@@ -4,6 +4,12 @@ import Gambar4 from "./Gambar4";
 import Gambar5 from "./Gambar5";
 import Gambar6 from "./Gambar6";
 import Gambar1 from "./Gambar1";
+import Gambar7 from "./Gambar7";
+import Gambar8 from "./Gambar8";
+import Gambar9 from "./Gambar9";
+import Gambar10 from "./Gambar10";
+import Gambar11 from "./Gambar11";
+import Gambar12 from "./Gambar12";
 
 const Work = () => {
   return (
@@ -16,6 +22,12 @@ const Work = () => {
           <Gambar4 />
           <Gambar5 />
           <Gambar6 />
+          <Gambar7 />
+          <Gambar8 />
+          <Gambar9 />
+          <Gambar10 />
+          <Gambar11 />
+          <Gambar12 />
         </div>
       </div>
     </section>
