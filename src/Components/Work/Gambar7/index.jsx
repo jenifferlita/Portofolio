@@ -19,3 +19,4 @@ const Gambar7 = () => {
 };
 
 export default Gambar7;
+

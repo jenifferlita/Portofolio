@@ -7,7 +7,7 @@ const Navigation = () => {
         <div className="header-content clearfix">
           {" "}
           <a className="logo" href="#">
-            JENIFFER    
+            JENIFFER
           </a>
           <nav className="navigation" role="navigation">
             <ul className="primary-nav">
