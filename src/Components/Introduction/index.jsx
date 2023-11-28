@@ -1,27 +1,43 @@
-/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useState } from "react";
+import { getDatabase, ref, child, get } from "firebase/database";
+
 const Introduction = () => {
+  const [title, setTitle] = useState("");
+  const [subTitle, setSubTitle] = useState("");
+  const [isi, setIsi] = useState("");
+
+  useEffect(() => {
+    const dbRef = ref(getDatabase());
+
+    get(child(dbRef, `introduction`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          setTitle(data.title);
+          setSubTitle(data.subTitle);
+          setIsi(data.isi);
+        } else {
+          console.log("No data available");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <section id="introduction" className="section introduction">
       <div className="container">
         <div className="row">
           <div className="col-md-4 col-sm-6">
             <div className="intro-content">
-              <h1>I do... What I love to do...</h1>
+              <h1>{title}</h1>
             </div>
           </div>
           <div className="col-md-5 col-sm-6">
             <div className="intro-content">
-              <p>
-                I am a photography enthusiast who has always been fascinated by
-                the beauty that can be captured through a camera lens.
-              </p>
-              <p>
-                To me, photography is more than just taking pictures; it's a way
-                to capture different moments, emotions, and unique stories. With
-                my camera in hand, I explore the world in search of new angles
-                and unexpected moments to capture. Every shot is a new adventure
-                in exploring and capturing the wonders around us.{" "}
-              </p>
+              <p>{subTitle}</p>
+              <p>{isi} </p>
             </div>
           </div>
           <div className="col-md-3 col-sm-6">
